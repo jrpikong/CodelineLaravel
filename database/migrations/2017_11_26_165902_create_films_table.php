@@ -23,8 +23,8 @@ class CreateFilmsTable extends Migration
             $table->string('country');
             $table->string('genre');
             $table->string('photo');
-            $table->unsignedInteger('user_id');
 
+            $table->unsignedInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade');
